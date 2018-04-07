@@ -93,20 +93,24 @@ int main() {
         switch (op) {
             case '+':
                 if (cin >> znach) tree.insert(znach);
-                else cout << "An error has occured while reading input data\n";
+                else cout << "An fatal error has occured while reading input data\n";
                 break;
             case '?':
                 if (cin >> znach) {
                     if (!tree.find(znach)) cout << "false\n";
                     else cout << "true\n";
                 }
-                else cout << "An error has occured while reading input data\n";
+                else cout << "An fatal error has occured while reading input data\n";
                 break;
             case '=':
                 tree.print(cout);
                 break;
             case 'q':
                 exit(5);
+            default:
+                if (cin >> znach) cout << "An  error has occured while reading input data\n";
+                else cout << "An fatal error has occured while reading input data\n";
+                break;    
         }
     }
 }
