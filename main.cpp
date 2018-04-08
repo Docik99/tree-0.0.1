@@ -75,6 +75,7 @@ public:
 
     bool find(int value) const {
         if (root_ != nullptr) return root_->find_t(value);
+        else return false;
     }
 
     void print(ostream & stream) const {
